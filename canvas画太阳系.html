@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas></canvas>
+</body>
+<script>
+    var canvas = document.querySelector('canvas');
+    canvas.width =1000;
+    canvas.height = 1000;
+    canvas.style.background = '#000';
+    var ctx = canvas.getContext('2d');
+    //划轨道
+    function drawTrack() {
+        for(var i=0;i<8;i++){
+            ctx.beginPath();
+            ctx.arc(500,500,(i+1)*50,0,360,false);
+            ctx.closePath();
+            ctx.strokeStyle = '#fff';
+            ctx.stroke();
+        }
+    }
+    drawTrack();
+    function star(x,y,radius) {
+        //画出星球需要那些属性
+        //星球的坐标点
+        this.x = x;
+        this.y = y;
+
+        this.radius = radius;
+        this.cycle = cycle;
+        this.scolor = scolor;
+        this.ecolor = ecolor;
+
+    }
+</script>
+</html>

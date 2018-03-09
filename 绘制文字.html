@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="width: 500px;height: 500px;"></div>
+</body>
+</html>
+<script src="../node_modules/echarts/dist/echarts.js"></script>
+<script>
+    var myChart = echarts.init(document.querySelector('div'));
+    var option = {
+        series: {
+            type: 'sunburst',
+            data: [{
+                name: 'A',
+                value: 10,
+                children: [{
+                    value: 3,
+                    name: 'Aa'
+                }, {
+                    value: 5,
+                    name: 'Ab'
+                }]
+            }, {
+                name: 'B',
+                children: [{
+                    name: 'Ba',
+                    value: 4
+                }, {
+                    name: 'Bb',
+                    value: 2
+                }]
+            }, {
+                name: 'C',
+                value: 3
+            }]
+        }
+    };
+    myChart.setOption(option);
+</script>
