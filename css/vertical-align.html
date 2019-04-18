@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>vertical-align详解</title>
+	<style>
+		.block-wrapper .d1{width: 100px;height: 100px;border: 1px solid red;display: inline-block;}
+		.block-wrapper>div{margin-bottom: 20px;}
+		.v-a-m{vertical-align: middle;} /*元素位于父元素的中部*/
+		.v-a-t{vertical-align: top;} 	/*元素位于父元素的顶部*/
+		.v-a-b{vertical-align: baseline;} /*元素位于父元素的基线上*/
+		.v-a-sub{vertical-align: sub;} /*元素垂直对齐文本的下标*/
+		.v-a-sup{vertical-align: super;} /*元素垂直对齐文本的上标*/
+		.v-a-bot{vertical-align: bottom;} /*把元素的顶端与行中最低的元素的顶端对齐*/
+	</style>
+</head>
+<body>
+	<!-- vertical-align 从翻译来看 它属于元素的垂直对齐 -->
+	<div class="block-wrapper">
+		<div>你好<div class="d1 v-a-m"></div>,show dog</div>
+		<div>你好<div class="d1 v-a-t"></div>,show dog</div>
+		<div>你好<div class="d1 v-a-b"></div>,show dog</div>
+		<div>你好<div class="d1 v-a-sub"></div>,show dog</div>
+		<div>你好<div class="d1 v-a-sup"></div>,show dog</div>
+		<div>你好<div class="d1 v-a-bot"></div>,show dog</div>
+	</div>
+</body>
+</html>
